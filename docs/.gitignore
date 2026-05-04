@@ -1,0 +1,17 @@
+# Archivos compilados
+*.class
+
+# Carpeta de compilación
+/out/
+/bin/
+/build/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración de VS Code
+.vscode/
+
+# Logs
+*.log
