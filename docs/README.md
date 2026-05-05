@@ -56,6 +56,7 @@ PESAJE-APP/
 │   └── Main.java
 │
 ├── docs/
+├── Documentacion Pesaje.docx
 ├── .gitignore
 └── README.md
 ```
