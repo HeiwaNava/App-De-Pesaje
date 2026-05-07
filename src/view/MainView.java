@@ -1,9 +1,9 @@
-package src.view;
+package view;
 
-import src.controller.PesajeController;
-import src.model.Pesaje;
-import src.model.PesajeManager;
-import src.model.PesajeObserver;
+import controller.PesajeController;
+import model.Pesaje;
+import model.PesajeManager;
+import model.PesajeObserver;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,6 +17,7 @@ public class MainView extends JFrame implements PesajeObserver {
     private PesajeController controller;
 
     public MainView() {
+
         controller = new PesajeController();
         PesajeManager.getInstance().addObserver(this);
 
@@ -28,10 +29,12 @@ public class MainView extends JFrame implements PesajeObserver {
         JPanel panelTop = new JPanel(new GridLayout(3,2));
 
         panelTop.add(new JLabel("Producto:"));
+
         txtProducto = new JTextField();
         panelTop.add(txtProducto);
 
         panelTop.add(new JLabel("Peso (kg):"));
+
         txtPeso = new JTextField();
         panelTop.add(txtPeso);
 
@@ -49,7 +52,9 @@ public class MainView extends JFrame implements PesajeObserver {
     }
 
     private void registrar() {
+
         try {
+
             String producto = txtProducto.getText();
             double peso = Double.parseDouble(txtPeso.getText());
 
@@ -59,15 +64,18 @@ public class MainView extends JFrame implements PesajeObserver {
             txtPeso.setText("");
 
         } catch (Exception e) {
+
             JOptionPane.showMessageDialog(this, "Datos inválidos");
         }
     }
 
     @Override
     public void actualizar() {
+
         areaLista.setText("");
 
         for (Pesaje p : PesajeManager.getInstance().getLista()) {
+
             areaLista.append(p.toString() + "\n");
         }
     }

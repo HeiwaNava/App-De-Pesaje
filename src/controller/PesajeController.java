@@ -1,7 +1,7 @@
-package src.controller;
+package controller;
 
-import src.model.Pesaje;
-import src.model.PesajeManager;
+import model.Pesaje;
+import model.PesajeManager;
 
 public class PesajeController {
 
